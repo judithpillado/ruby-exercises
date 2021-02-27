@@ -214,4 +214,12 @@ class StringTest < Minitest::Test
 
     assert_equal expected, actual
   end
+
+  def test_26
+    phrase = "   \n  \tto the    moon\n\n\t    "
+    actual = "  " + phrase.lstrip
+    expected = "  to the    moon\n\n\t    "
+
+    assert_equal expected, actual
+  end
 end
