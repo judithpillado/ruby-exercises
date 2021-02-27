@@ -1,18 +1,10 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 
-# There's a video walk-through of this exercise available here:
-# https://youtu.be/aeAkLxr5diE
-# and a helpful blog post on this general topic here:
-# https://josh.works/turing-backend-prep-02-first-tests-and-making-them-pass
-
 class StringTest < Minitest::Test
   def test_1
-    skip
     name = "alice"
-    # In place of the line below, call a method on the name variable
-    # defined above to acheive the expected output.
-    actual = name._____
+    actual = name.capitalize
     expected = "Alice"
 
     assert_equal expected, actual
@@ -206,10 +198,10 @@ class StringTest < Minitest::Test
     #greeting and name variables to acheive the expected outcome
     actual = _________
     expected = "Hello World, my name is Harry Potter"
-    
+
     assert_equal expected, actual
   end
-  
+
   def test_21
     skip
     # See if you can use another method than the last test to achieve the same goal:
@@ -220,7 +212,7 @@ class StringTest < Minitest::Test
 
     assert_equal expected, actual
   end
-  
+
   def test_22
     skip
     # Again, using a different method:
@@ -229,7 +221,7 @@ class StringTest < Minitest::Test
 
     assert_equal expected, actual
   end
-  
+
   def test_23
     skip
     # Once more, using a different method:
