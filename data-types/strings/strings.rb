@@ -182,9 +182,9 @@ class StringTest < Minitest::Test
   end
 
   def test_22
-    skip
-    # Again, using a different method:
-    actual = ________
+    greeting = "Hello World, my name is"
+    name = "Harry Potter"
+    actual = "#{greeting} " << name 
     expected = "Hello World, my name is Harry Potter"
 
     assert_equal expected, actual
