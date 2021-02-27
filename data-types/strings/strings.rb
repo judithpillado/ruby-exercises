@@ -165,7 +165,6 @@ class StringTest < Minitest::Test
     name = "Harry Potter"
     # In place of the line below, use string manipulation to combine the greeting and name variables to acheive the expected outcome
     actual = "#{greeting} ".concat(name)
-    # actual = greeting + " " + name
     expected = "Hello World, my name is Harry Potter"
 
     assert_equal expected, actual
@@ -184,16 +183,16 @@ class StringTest < Minitest::Test
   def test_22
     greeting = "Hello World, my name is"
     name = "Harry Potter"
-    actual = "#{greeting} " << name 
+    actual = "#{greeting} " << name
     expected = "Hello World, my name is Harry Potter"
 
     assert_equal expected, actual
   end
 
   def test_23
-    skip
-    # Once more, using a different method:
-    actual = ________
+    greeting = "Hello World, my name is"
+    name = "Harry Potter"
+    actual = greeting + " " + name
     expected = "Hello World, my name is Harry Potter"
 
     assert_equal expected, actual
