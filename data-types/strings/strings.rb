@@ -124,20 +124,19 @@ class StringTest < Minitest::Test
   end
 
   def test_16
-    skip
     greeting = "Hello World!"
     # In place of the line below, call a method to get the number of 'o' in the string
-    actual = greeting._____
+    actual = greeting.count("o")
     expected = 2
 
     assert_equal expected, actual
   end
 
   def test_17
-    skip
     greeting = "Hello World!"
     # In place of the line below, call a method to get the number of vowels in the string
-    actual = greeting._____
+    actual = greeting.scan(/[aeiou]/).length
+    # actual = greeting.count("aeiou")
     expected = 3
 
     assert_equal expected, actual
