@@ -41,16 +41,14 @@ class IntsAndFloatsTests < Minitest::Test
   def test_6
     # Find out if the lucky number is even
     lucky = 7
-    even = lucky.even? 
+    even = lucky.even?
     assert_equal false, even
   end
 
   def test_7
-    skip
+    # Round the number to the nearest whole number
     pi = 3.14
-    # Using the variable defined above,
-    # round the number to the nearest whole number
-    rounded = _________
+    rounded = pi.round
     assert_equal 3, rounded
   end
 
