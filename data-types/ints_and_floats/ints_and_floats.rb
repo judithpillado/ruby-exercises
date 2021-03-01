@@ -5,9 +5,7 @@ class IntsAndFloatsTests < Minitest::Test
   def test_1
     lucky = 7
     unlucky = 13
-    # Using the two variables defined above,
-    # add the lucky number and the unlucky number
-    sum = ________
+    sum = lucky + unlucky
     assert_equal 20, sum
   end
 
