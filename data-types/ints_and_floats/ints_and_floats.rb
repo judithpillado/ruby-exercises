@@ -10,12 +10,9 @@ class IntsAndFloatsTests < Minitest::Test
   end
 
   def test_2
-    skip
     lucky = 7
     unlucky = 13
-    # Using the two variables defined above,
-    # subtract the unlucky from the lucky
-    difference = ________
+    difference = lucky - unlucky
     assert_equal -6, difference
   end
 
