@@ -22,23 +22,21 @@ class ArraysTest < Minitest::Test
     assert_equal expected, actual
   end
 
-  def test_22
-    skip
-    # In the line below, call a method on the nums variable
-    # defined above to access the last element
+  def test_3
+    # In the line below, call a method on the nums variable defined above to access the last element
     nums = [1,2,3]
-    actual = nums
+    actual = nums[-1]
     expected = 3
     assert_equal expected, actual
 
     # Now try to find another way to achieve the same effect
     nums = [1,2,3]
-    actual = nums
+    actual = nums.last
     expected = 3
     assert_equal expected, actual
   end
 
-  def test_3
+  def test_22
     skip
     hummus = ["tahini", "chickpeas", "lemons"]
     # Call a method on the hummus variable that will
