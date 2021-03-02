@@ -15,10 +15,9 @@ class ArraysTest < Minitest::Test
   end
 
   def test_2
-    skip
-    nums = [1,2,3]
     # Call a method on the nums variable defined above to access the second element
-    actual = nums.______
+    nums = [1,2,3]
+    actual = nums[1]
     expected = 2
     assert_equal expected, actual
   end
