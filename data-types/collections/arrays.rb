@@ -42,18 +42,17 @@ class ArraysTest < Minitest::Test
     assert_equal 3, hummus.size
   end
 
-  # def test_4
-  #   skip
-  #   world_cup = ["Germany", "Mexico", "Iceland", "Portugal"]
-  #   # In the line below, add the element "Brazil" to the end of the world_cup array
-  #
-  #   assert_equal "Brazil", world_cup.last
-  #
-  #   # Use a different method to add the element "Japan" to the end of the array
-  #
-  #   assert_equal "Japan", world_cup.last
-  # end
-  #
+  def test_5
+    # Add the element "Brazil" to the end of the world_cup array
+    world_cup = ["Germany", "Mexico", "Iceland", "Portugal"]
+    world_cup << "Brazil"
+    assert_equal "Brazil", world_cup.last
+
+    # Use a different method to add the element "Japan" to the end of the array
+    world_cup.push "Japan"
+    assert_equal "Japan", world_cup.last
+  end
+
   # def test_a
   #   skip
   #   world_cup = ["Germany", "Mexico", "Iceland", "Portugal"]
