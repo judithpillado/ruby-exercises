@@ -9,17 +9,15 @@ class ArraysTest < Minitest::Test
   end
 
   def test_1
-    skip
-    # In the line below, create and array with the numbers 1 - 5
-    nums = ______
+    # Create and array with the numbers 1 - 5
+    nums = (1..5).to_a
     assert_equal [1,2,3,4,5], nums
   end
 
   def test_2
     skip
     nums = [1,2,3]
-    # In the line below, call a method on the nums variable
-    # defined above to access the second element
+    # Call a method on the nums variable defined above to access the second element
     actual = nums.______
     expected = 2
     assert_equal expected, actual
