@@ -98,15 +98,13 @@ class NestesdCollectionsTest < Minitest::Test
   end
 
   def test_10
-    skip
+    # Find out if "Kenny" is a pitcher
     team = {
       pitchers: ["Kenny", "Joan", "Shabaz"],
       fielders: ["Luke", "Chris", "Megan", "Mark", "Mackenzie"],
       catchers: ["Johnny"]
     }
-    # Using the team variable defined above
-    # Find out if "Kenny" is a pitcher
-    kenny_is_pitcher = ________
+    kenny_is_pitcher = team[:pitchers].include?("Kenny")
     assert_equal true, kenny_is_pitcher
   end
 
