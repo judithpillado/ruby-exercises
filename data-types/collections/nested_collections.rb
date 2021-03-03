@@ -70,17 +70,13 @@ class NestesdCollectionsTest < Minitest::Test
   end
 
   def test_8
-    skip
+    # Create a new key :coaches with the value of an empty array
     team = {
       pitchers: ["Kenny", "Joan", "Shabaz"],
       fielders: ["Luke", "Chris", "Megan", "Mark", "Mackenzie"],
       catchers: ["Johnny"]
     }
-    # Using the team variable defined above
-    # create a new key :coaches with the value
-    # of an empty array
-    _________
-
+    team[:coaches] = Array.new
     expected = {
       pitchers: ["Kenny", "Joan", "Shabaz"],
       fielders: ["Luke", "Chris", "Megan", "Mark", "Mackenzie"],
