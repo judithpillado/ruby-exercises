@@ -78,15 +78,14 @@ class ArraysTest < Minitest::Test
     assert_equal ["Vocals", "Guitar", "Drums", "Bass"], band.unshift("Vocals")
   end
 
-  # def test_c
-  #   skip
-  #   garden = ["Tulips", "Tomatoes", "Basil", "Peppers"]
-  #   # Call a method to remove and return the first element from the garden array
-  #   first_element = garden
-  #   assert_equal ["Tomatoes", "Basil", "Peppers"], garden
-  #   assert_equal "Tulips", first_element
-  # end
-  #
+  def test_9
+    # Call a method to remove and return the first element from the garden array
+    garden = ["Tulips", "Tomatoes", "Basil", "Peppers"]
+    first_element = garden.shift
+    assert_equal ["Tomatoes", "Basil", "Peppers"], garden
+    assert_equal "Tulips", first_element
+  end
+
   # def test_6
   #   skip
   #   teams = ["Rockies", "Avalanche", "Nuggets", "Broncos", "Rapids"]
