@@ -143,15 +143,13 @@ class ArraysTest < Minitest::Test
     assert_equal "Sarah, Owen, Peter", one_string
   end
 
-  # def test_13
-  #   skip
-  #   ascending = [1,2,3,4,5]
-  #   # Call a method on the ascending variable to create an array
-  #   # with the elements in the opposite order
-  #   descending = ascending
-  #   assert_equal [5,4,3,2,1], descending
-  # end
-  #
+  def test_17
+    # Call a method on the ascending variable to create an array with the elements in the opposite order
+    ascending = [1,2,3,4,5]
+    descending = ascending.reverse
+    assert_equal [5,4,3,2,1], descending
+  end
+
   # def test_14
   #   skip
   #   dice = [1,2,3,4,5,6]
