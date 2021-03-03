@@ -38,16 +38,13 @@ class HashesTest < Minitest::Test
     assert_equal 6, ages[:kelly]
   end
 
-  # def test_5
-  #   # In the line below, create a new hash with
-  #   # default values of zero
-  #   # create a "tomatoes" key and a :carrots key
-  #   ingredients = ______
-  #
-  #   assert_equal 0, ingredients["tomatoes"]
-  #   assert_equal 0, ingredients[:carrots]
-  # end
-  #
+  def test_5
+    # In the line below, create a new hash with default values of zero; create a "tomatoes" key and a :carrots key
+    ingredients = Hash.new(0)
+    assert_equal 0, ingredients["tomatoes"]
+    assert_equal 0, ingredients[:carrots]
+  end
+
   # def test_6
   #   books = {
   #     "John Steinbeck" => "Grapes of Wrath",
