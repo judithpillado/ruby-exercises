@@ -219,20 +219,19 @@ class HashesTest < Minitest::Test
     assert_equal false, jackie_in_hash
   end
 
-  # def test_20
-  #   ages = {
-  #     Jimmy: 4,
-  #     Julio: 8,
-  #     Juliet: 9
-  #   }
-  #   # Call a method on the ages hash defined above
-  #   # to make the keys the values and vice versa
-  #   opposite = _____
-  #   expected = {
-  #     4 => :Jimmy,
-  #     8 => :Julio,
-  #     9 => :Juliet
-  #   }
-  #   assert_equal expected, opposite
-  # end
+  def test_20
+    ages = {
+      # Make the keys the values and vice versa
+      Jimmy: 4,
+      Julio: 8,
+      Juliet: 9
+    }
+    opposite = ages.invert
+    expected = {
+      4 => :Jimmy,
+      8 => :Julio,
+      9 => :Juliet
+    }
+    assert_equal expected, opposite
+  end
 end
