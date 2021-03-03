@@ -87,15 +87,13 @@ class NestesdCollectionsTest < Minitest::Test
   end
 
   def test_9
-    skip
+    # Find out how many fielders there are
     team = {
       pitchers: ["Kenny", "Joan", "Shabaz"],
       fielders: ["Luke", "Chris", "Megan", "Mark", "Mackenzie"],
       catchers: ["Johnny"]
     }
-    # Using the team variable defined above
-    # Find out how many fielders there are
-    num_fielders = ________
+    num_fielders = team[:fielders].length
     assert_equal 5, num_fielders
   end
 
