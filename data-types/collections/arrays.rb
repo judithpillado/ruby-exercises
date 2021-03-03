@@ -122,14 +122,13 @@ class ArraysTest < Minitest::Test
     assert_equal [48, 23, 56, 34, 29], new_scores
   end
 
-  # def test_10
-  #   skip
-  #   vowels = ["a", "e", "y", "i", "o", "u", "y"]
-  #   # Call a method on the vowels variable to remove "y"
-  #
-  #   assert_equal ["a", "e", "i", "o", "u"], vowels
-  # end
-  #
+  def test_14
+    # Call a method on the vowels variable to remove "y"
+    vowels = ["a", "e", "y", "i", "o", "u", "y"]
+    vowels.delete("y")
+    assert_equal ["a", "e", "i", "o", "u"], vowels
+  end
+
   # def test_11
   #   skip
   #   furniture = ["couch", "bed", "table"]
