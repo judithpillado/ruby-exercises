@@ -72,15 +72,12 @@ class ArraysTest < Minitest::Test
     assert_equal true, dancing_queen_in_array
   end
 
-  # def test_b
-  #   skip
-  #   band = ["Guitar", "Drums", "Bass"]
-  #   # Call a method on the band variable to add the element "Vocals"
-  #   # to the beginning of the array
-  #
-  #   assert_equal ["Vocals", "Guitar", "Drums", "Bass"], band
-  # end
-  #
+  def test_8
+    # Call a method on the band variable to add the element "Vocals" to the beginning of the array
+    band = ["Guitar", "Drums", "Bass"]
+    assert_equal ["Vocals", "Guitar", "Drums", "Bass"], band.unshift("Vocals")
+  end
+
   # def test_c
   #   skip
   #   garden = ["Tulips", "Tomatoes", "Basil", "Peppers"]
