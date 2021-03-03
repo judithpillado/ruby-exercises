@@ -150,18 +150,13 @@ class ArraysTest < Minitest::Test
     assert_equal [5,4,3,2,1], descending
   end
 
-  # def test_14
-  #   skip
-  #   dice = [1,2,3,4,5,6]
-  #   # Call a method on the dice variable to get a random element out
-  #   # of the array
-  #   roll = dice
-  #   assert_equal true, roll <= 6
-  #   assert_equal true, roll >= 1
-  #   # Note, this assertion assumes the Ruby Version is 2.4 or higher.
-  #   # This test will fail with expecting roll to be a FixNum if the
-  #   # Ruby version is 2.3 or earlier
-  #   assert_instance_of Integer, roll
-  # end
-
+  def test_18
+    dice = [1,2,3,4,5,6]
+    # Call a method on the dice variable to get a random element out of the array
+    # Note, this assertion assumes the Ruby Version is 2.4 or higher. This test will fail with expecting roll to be a FixNum if the Ruby version is 2.3 or earlier
+    roll = dice.sample
+    assert_equal true, roll <= 6
+    assert_equal true, roll >= 1
+    assert_instance_of Integer, roll
+  end
 end
