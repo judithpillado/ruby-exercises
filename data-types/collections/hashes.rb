@@ -8,12 +8,12 @@ class HashesTest < Minitest::Test
     assert_equal ({}), empty
   end
 
-  # def test_2
-  #   # In the line below, create an empty hash with a default value 0
-  #   empty = ______
-  #   assert_equal 0, empty[:not_found]
-  # end
-  #
+  def test_2
+    # Create an empty hash with a default value 0
+    empty = Hash.new(0)
+    assert_equal 0, empty[:not_found]
+  end
+
   # def test_3
   #   # In the line below, create a hash called ages. The hash should
   #   # have a key of "ben" with a value of 4 and a key of "kelly" with
