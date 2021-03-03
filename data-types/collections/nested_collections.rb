@@ -34,12 +34,9 @@ class NestesdCollectionsTest < Minitest::Test
   end
 
   def test_5
-    skip
+    # Add the coordinate [4, 14]
     coordinates = [[2,5],[87,2],[56,39],[3,46]]
-    # Using the coordinates variable defined above
-    # add the coordinate [4, 14]
-    _________
-
+    coordinates << [4,14]
     expected = [[2,5],[87,2],[56,39],[3,46],[4, 14]]
     assert_equal expected, coordinates
   end
