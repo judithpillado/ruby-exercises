@@ -104,14 +104,13 @@ class ArraysTest < Minitest::Test
     assert_equal ["Pikes Peak", "Mount Elbert", "Mount Evans"], fourteeners
   end
 
-  # def test_8
-  #   skip
-  #   pokemon = [["Squirtle", "Charmander", "Bulbasaur"], ["Pikachu"], "Staryu"]
-  #   # Call a method on the pokemon variable to remove the nesting
-  #   pokemon = pokemon
-  #   assert_equal ["Squirtle", "Charmander", "Bulbasaur", "Pikachu", "Staryu"], pokemon
-  # end
-  #
+  def test_12
+    # Call a method on the pokemon variable to remove the nesting
+    pokemon = [["Squirtle", "Charmander", "Bulbasaur"], ["Pikachu"], "Staryu"]
+    pokemon = pokemon.flatten
+    assert_equal ["Squirtle", "Charmander", "Bulbasaur", "Pikachu", "Staryu"], pokemon
+  end
+
   # def test_9
   #   skip
   #   scores = [23, 56, 34, 29, 48]
