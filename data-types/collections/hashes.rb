@@ -204,23 +204,21 @@ class HashesTest < Minitest::Test
     assert_equal 3, num_pairs
   end
 
-  # def test_19
-  #   ages = {
-  #     Jimmy: 4,
-  #     Julio: 8,
-  #     Juliet: 9
-  #   }
-  #   # Call a method on the ages hash defined above
-  #   # to figure out if :Jimmy is a key
-  #   jimmy_in_hash = ______
-  #   assert_equal true, jimmy_in_hash
-  #
-  #   # Now figure out if :Jackie is in the hash
-  #
-  #   jackie_in_hash = ______
-  #   assert_equal false, jackie_in_hash
-  # end
-  #
+  def test_19
+    # Figure out if :Jimmy is a key
+    ages = {
+      Jimmy: 4,
+      Julio: 8,
+      Juliet: 9
+    }
+    jimmy_in_hash = ages.has_key?(:Jimmy)
+    assert_equal true, jimmy_in_hash
+
+    # Now figure out if :Jackie is in the hash
+    jackie_in_hash = ages.include?(:Jackie)
+    assert_equal false, jackie_in_hash
+  end
+
   # def test_20
   #   ages = {
   #     Jimmy: 4,
