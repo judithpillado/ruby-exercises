@@ -156,22 +156,21 @@ class HashesTest < Minitest::Test
       "Julio" => 8,
       "Juliet" => 9
     }
-    ages["Julio"] = +1 
+    ages["Julio"] += 1
     assert_equal 9, ages["Julio"]
   end
 
-  # def test_15
-  #   ages = {
-  #     Jimmy: 4,
-  #     Julio: 8,
-  #     Juliet: 9
-  #   }
-  #   # Using the ages hash defined above
-  #   # increment Julio's age by one
-  #   ______
-  #   assert_equal 9, ages[:Julio]
-  # end
-  #
+  def test_15
+    # Increment Julio's age by one
+    ages = {
+      Jimmy: 4,
+      Julio: 8,
+      Juliet: 9
+    }
+    ages[:Julio] += 1
+    assert_equal 9, ages[:Julio]
+  end
+
   # def test_16
   #   ages = {
   #     Jimmy: 4,
