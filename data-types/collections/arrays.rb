@@ -97,14 +97,13 @@ class ArraysTest < Minitest::Test
     assert_equal ["Rockies", "Avalanche"], some_teams
   end
 
-  # def test_7
-  #   skip
-  #   fourteeners = ["Pikes Peak", nil, "Mount Elbert", nil, "Mount Evans"]
-  #   # Call a method on the fourteeners variable to remove the nils
-  #   fourteeners = fourteeners
-  #   assert_equal ["Pikes Peak", "Mount Elbert", "Mount Evans"], fourteeners
-  # end
-  #
+  def test_11
+    # Call a method on the fourteeners variable to remove the nils
+    fourteeners = ["Pikes Peak", nil, "Mount Elbert", nil, "Mount Evans"]
+    fourteeners = fourteeners.compact
+    assert_equal ["Pikes Peak", "Mount Elbert", "Mount Evans"], fourteeners
+  end
+
   # def test_8
   #   skip
   #   pokemon = [["Squirtle", "Charmander", "Bulbasaur"], ["Pikachu"], "Staryu"]
