@@ -42,15 +42,13 @@ class NestesdCollectionsTest < Minitest::Test
   end
 
   def test_6
-    skip
+    # Retrieve all of the pitchers
     team = {
       pitchers: ["Kenny", "Joan", "Shabaz"],
       fielders: ["Luke", "Chris", "Megan", "Mark", "Mackenzie"],
       catchers: ["Johnny"]
     }
-    # Using the team variable defined above
-    # retrieve all of the pitchers
-    pitchers = _________
+    pitchers = team[:pitchers]
     expected = ["Kenny", "Joan", "Shabaz"]
     assert_equal expected, pitchers
   end
