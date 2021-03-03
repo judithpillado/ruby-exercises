@@ -182,18 +182,17 @@ class HashesTest < Minitest::Test
     assert_equal [:Jimmy, :Julio, :Juliet], names
   end
 
-  # def test_17
-  #   ages = {
-  #     Jimmy: 4,
-  #     Julio: 8,
-  #     Juliet: 9
-  #   }
-  #   # Using the ages hash defined above
-  #   # get an array of all the ages
-  #   age_list = ______
-  #   assert_equal [4, 8, 9], age_list
-  # end
-  #
+  def test_17
+    # Get an array of all the ages
+    ages = {
+      Jimmy: 4,
+      Julio: 8,
+      Juliet: 9
+    }
+    age_list = ages.values
+    assert_equal [4, 8, 9], age_list
+  end
+
   # def test_18
   #   ages = {
   #     Jimmy: 4,
