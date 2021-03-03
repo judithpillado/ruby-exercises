@@ -136,20 +136,19 @@ class HashesTest < Minitest::Test
     assert_equal expected, books
   end
 
-  # def test_13
-  #   books = {
-  #     John_Steinbeck: "Grapes of Wrath",
-  #     Harper_Lee: "To Kill a Mockingbird"
-  #   }
-  #   # Using the books hash defined above,
-  #   # delete the key :Harper_Lee
-  #   ______
-  #   expected = {
-  #     John_Steinbeck: "Grapes of Wrath"
-  #   }
-  #   assert_equal expected, books
-  # end
-  #
+  def test_13
+    # Delete the key :Harper_Lee
+    books = {
+      John_Steinbeck: "Grapes of Wrath",
+      Harper_Lee: "To Kill a Mockingbird"
+    }
+    books.delete(:Harper_Lee)
+    expected = {
+      John_Steinbeck: "Grapes of Wrath"
+    }
+    assert_equal expected, books
+  end
+
   # def test_14
   #   ages = {
   #     "Jimmy" => 4,
