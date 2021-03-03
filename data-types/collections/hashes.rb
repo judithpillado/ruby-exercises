@@ -22,23 +22,22 @@ class HashesTest < Minitest::Test
     assert_equal 6, ages["kelly"]
   end
 
-  # def test_4
-  #   # In the line below, create a hash called ages. The hash should
-  #   # have a key of :ben with a value of 4 and a key of :kelly with
-  #   # a value of 6.
-  #   ages = ______
-  #   assert_equal 2, ages.length
-  #   assert_equal 4, ages[:ben]
-  #   assert_equal 6, ages[:kelly]
-  #
-  #   # There are two different syntaxes for doing this. Use the other way to
-  #   # achieve the same result
-  #   ages = ______
-  #   assert_equal 2, ages.length
-  #   assert_equal 4, ages[:ben]
-  #   assert_equal 6, ages[:kelly]
-  # end
-  #
+  def test_4
+    # In the line below, create a hash called ages. The hash should have a key of :ben with a value of 4 and a key of :kelly with a value of 6.
+    ages = {ben: 4, kelly: 6}
+    assert_equal 2, ages.length
+    assert_equal 4, ages[:ben]
+    assert_equal 6, ages[:kelly]
+
+    # There are two different syntaxes for doing this. Use the other way to achieve the same result
+    ages = Hash.new
+    ages[:ben] = 4
+    ages[:kelly] = 6
+    assert_equal 2, ages.length
+    assert_equal 4, ages[:ben]
+    assert_equal 6, ages[:kelly]
+  end
+
   # def test_5
   #   # In the line below, create a new hash with
   #   # default values of zero
