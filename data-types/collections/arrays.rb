@@ -136,15 +136,13 @@ class ArraysTest < Minitest::Test
     assert_equal ["couch", "dresser", "bed", "table"], new_furniture
   end
 
-  # def test_12
-  #   skip
-  #   children = ["Sarah", "Owen", "Peter"]
-  #   # Call a method on the children variable to combine them into
-  #   # one string like this: "Sarah, Owen, Peter"
-  #   one_string = children
-  #   assert_equal "Sarah, Owen, Peter", one_string
-  # end
-  #
+  def test_16
+    # Call a method on the children variable to combine them into one string like this: "Sarah, Owen, Peter"
+    children = ["Sarah", "Owen", "Peter"]
+    one_string = children.join(", ")
+    assert_equal "Sarah, Owen, Peter", one_string
+  end
+
   # def test_13
   #   skip
   #   ascending = [1,2,3,4,5]
