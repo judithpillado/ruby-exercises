@@ -193,18 +193,17 @@ class HashesTest < Minitest::Test
     assert_equal [4, 8, 9], age_list
   end
 
-  # def test_18
-  #   ages = {
-  #     Jimmy: 4,
-  #     Julio: 8,
-  #     Juliet: 9
-  #   }
-  #   # Using the ages hash defined above
-  #   # find the number of key/value pairs
-  #   num_pairs = ______
-  #   assert_equal 3, num_pairs
-  # end
-  #
+  def test_18
+    # Find the number of key/value pairs
+    ages = {
+      Jimmy: 4,
+      Julio: 8,
+      Juliet: 9
+    }
+    num_pairs = ages.count
+    assert_equal 3, num_pairs
+  end
+
   # def test_19
   #   ages = {
   #     Jimmy: 4,
