@@ -56,25 +56,22 @@ class ArraysTest < Minitest::Test
   def test_6
     # Call a method on the world_cup variable to remove and return the last element of the array
     world_cup = ["Germany", "Mexico", "Iceland", "Portugal"]
-    last_element = world_cup.pop 
+    last_element = world_cup.pop
     assert_equal "Portugal", last_element
     assert_equal ["Germany", "Mexico", "Iceland"], world_cup
   end
 
-  # def test_5
-  #   skip
-  #   karaoke = ["Shake it Off", "Dancing Queen", "Bohemian Rhapsody"]
-  #   # Call a method on the karaoke variable to ask whether "Toxic"
-  #   # is an element or not
-  #   toxic_in_array = karaoke
-  #   assert_equal false, toxic_in_array
-  #
-  #   # Now call a method on the karaoke variable to ask whether "Dancing Queen"
-  #   # is an element or not
-  #   dancing_queen_in_array = karaoke
-  #   assert_equal true, dancing_queen_in_array
-  # end
-  #
+  def test_7
+    # Call a method on the karaoke variable to ask whether "Toxic" is an element or not
+    karaoke = ["Shake it Off", "Dancing Queen", "Bohemian Rhapsody"]
+    toxic_in_array = karaoke.include?("Toxic")
+    assert_equal false, toxic_in_array
+
+    # Call a method on the karaoke variable to ask whether "Dancing Queen" is an element or not
+    dancing_queen_in_array = karaoke.include?("Dancing Queen")
+    assert_equal true, dancing_queen_in_array
+  end
+
   # def test_b
   #   skip
   #   band = ["Guitar", "Drums", "Bass"]
