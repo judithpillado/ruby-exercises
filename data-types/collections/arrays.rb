@@ -86,18 +86,17 @@ class ArraysTest < Minitest::Test
     assert_equal "Tulips", first_element
   end
 
-  # def test_6
-  #   skip
-  #   teams = ["Rockies", "Avalanche", "Nuggets", "Broncos", "Rapids"]
-  #   # Call a method on the teams variable to get the second, third, and fourth teams
-  #   some_teams = teams
-  #   assert_equal ["Avalanche", "Nuggets", "Broncos"], some_teams
-  #
-  #   # Now use a different method on the teams variable to get the first and second teams
-  #   some_teams = teams
-  #   assert_equal ["Rockies", "Avalanche"], some_teams
-  # end
-  #
+  def test_10
+    # Call a method on the teams variable to get the second, third, and fourth teams
+    teams = ["Rockies", "Avalanche", "Nuggets", "Broncos", "Rapids"]
+    some_teams = teams[1..3]
+    assert_equal ["Avalanche", "Nuggets", "Broncos"], some_teams
+
+    # Now use a different method on the teams variable to get the first and second teams
+    some_teams = teams.take(2)
+    assert_equal ["Rockies", "Avalanche"], some_teams
+  end
+
   # def test_7
   #   skip
   #   fourteeners = ["Pikes Peak", nil, "Mount Elbert", nil, "Mount Evans"]
