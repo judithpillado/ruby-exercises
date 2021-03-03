@@ -26,13 +26,9 @@ class NestesdCollectionsTest < Minitest::Test
   end
 
   def test_4
-    skip
+    # Set the second element of the last coordinates to 0
     coordinates = [[2,5],[87,2],[56,39],[3,46]]
-    # Using the coordinates variable defined above
-    # set the second element of the last coordinates
-    # to 0
-    ________
-
+    coordinates.last[1] = 0
     expected = [[2,5],[87,2],[56,39],[3, 0]]
     assert_equal expected, coordinates
   end
