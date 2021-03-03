@@ -97,17 +97,16 @@ class HashesTest < Minitest::Test
     assert_equal expected, books
   end
 
-  # def test_10
-  #   books = {
-  #     John_Steinbeck: "Grapes of Wrath",
-  #     Harper_Lee: "To Kill a Mockingbird"
-  #   }
-  #   # Using the books hash defined above,
-  #   # access the value "Grapes of Wrath"  in the line below
-  #   grapes = ______
-  #   assert_equal "Grapes of Wrath", grapes
-  # end
-  #
+  def test_10
+    # Access the value "Grapes of Wrath"
+    books = {
+      John_Steinbeck: "Grapes of Wrath",
+      Harper_Lee: "To Kill a Mockingbird"
+    }
+    grapes = books[:John_Steinbeck]
+    assert_equal "Grapes of Wrath", grapes
+  end
+
   # def test_11
   #   books = {
   #     John_Steinbeck: "Grapes of Wrath",
