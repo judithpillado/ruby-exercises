@@ -111,20 +111,17 @@ class ArraysTest < Minitest::Test
     assert_equal ["Squirtle", "Charmander", "Bulbasaur", "Pikachu", "Staryu"], pokemon
   end
 
-  # def test_9
-  #   skip
-  #   scores = [23, 56, 34, 29, 48]
-  #   # Call a method on the scores variables that will
-  #   # move the elements two spots to the left
-  #   new_scores = scores
-  #   assert_equal [34, 29, 48, 23, 56], new_scores
-  #
-  #   # Now call a method on the scores variables that will
-  #   # move the elements one spot to the right
-  #   new_scores = scores
-  #   assert_equal [48, 23, 56, 34, 29], new_scores
-  # end
-  #
+  def test_13
+    # Call a method on the scores variables that will move the elements two spots to the left
+    scores = [23, 56, 34, 29, 48]
+    new_scores = scores.rotate(2)
+    assert_equal [34, 29, 48, 23, 56], new_scores
+
+    # Now call a method on the scores variables that will move the elements one spot to the right
+    new_scores = scores.rotate(-1)
+    assert_equal [48, 23, 56, 34, 29], new_scores
+  end
+
   # def test_10
   #   skip
   #   vowels = ["a", "e", "y", "i", "o", "u", "y"]
