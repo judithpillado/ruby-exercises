@@ -122,22 +122,20 @@ class HashesTest < Minitest::Test
     assert_equal expected, books
   end
 
-  # def test_12
-  #   books = {
-  #     John_Steinbeck: "Grapes of Wrath",
-  #     Harper_Lee: "To Kill a Mockingbird"
-  #   }
-  #   # Using the books hash defined above,
-  #   # change the value associated with
-  #   # :John_Steinbeck to "Of Mice and Men"
-  #   ______
-  #   expected =  {
-  #     John_Steinbeck: "Of Mice and Men",
-  #     Harper_Lee: "To Kill a Mockingbird"
-  #   }
-  #   assert_equal expected, books
-  # end
-  #
+  def test_12
+    # Change the value associated with :John_Steinbeck to "Of Mice and Men"
+    books = {
+      John_Steinbeck: "Grapes of Wrath",
+      Harper_Lee: "To Kill a Mockingbird"
+    }
+    books[:John_Steinbeck] = "Of Mice and Men"
+    expected =  {
+      John_Steinbeck: "Of Mice and Men",
+      Harper_Lee: "To Kill a Mockingbird"
+    }
+    assert_equal expected, books
+  end
+
   # def test_13
   #   books = {
   #     John_Steinbeck: "Grapes of Wrath",
