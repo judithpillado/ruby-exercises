@@ -55,24 +55,21 @@ class HashesTest < Minitest::Test
     assert_equal "Grapes of Wrath", grapes
   end
 
-  # def test_7
-  #   books = {
-  #     "John Steinbeck" => "Grapes of Wrath",
-  #     "Harper Lee" => "To Kill a Mockingbird"
-  #   }
-  #   # Using the books hash defined above,
-  #   # add a new key of "Ernest Hemmingway"
-  #   # with a value of "For Whom the Bell Tolls"
-  #   # in the line below
-  #   ______
-  #   expected = {
-  #     "John Steinbeck" => "Grapes of Wrath",
-  #     "Harper Lee" => "To Kill a Mockingbird",
-  #     "Ernest Hemmingway" => "For Whom the Bell Tolls"
-  #   }
-  #   assert_equal expected, books
-  # end
-  #
+  def test_7
+    # Using the books hash, add a new key of "Ernest Hemmingway" with a value of "For Whom the Bell Tolls"
+    books = {
+      "John Steinbeck" => "Grapes of Wrath",
+      "Harper Lee" => "To Kill a Mockingbird"
+    }
+    books["Ernest Hemmingway"] = "For Whom the Bell Tolls"
+    expected = {
+      "John Steinbeck" => "Grapes of Wrath",
+      "Harper Lee" => "To Kill a Mockingbird",
+      "Ernest Hemmingway" => "For Whom the Bell Tolls"
+    }
+    assert_equal expected, books
+  end
+
   # def test_8
   #   books = {
   #     "John Steinbeck" => "Grapes of Wrath",
