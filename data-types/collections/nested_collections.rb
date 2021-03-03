@@ -4,20 +4,16 @@ require 'minitest/pride'
 class NestesdCollectionsTest < Minitest::Test
 
   def test_1
-    coordinates = [[2,5],[87,2],[56,39],[3,46]]
-    # Using the coordinates variable defined above
     # Retrive the second element
+    coordinates = [[2,5],[87,2],[56,39],[3,46]]
     second = coordinates[1]
-
     assert_equal [87, 2], second
   end
 
   def test_2
-    skip
-    coordinates = [[2,5],[87,2],[56,39],[3,46]]
-    # Using the coordinates variable defined above
     # Retrive the value 39
-    thirty_nine = _________
+    coordinates = [[2,5],[87,2],[56,39],[3,46]]
+    thirty_nine = coordinates[2].last
     assert_equal 39, thirty_nine
   end
 
