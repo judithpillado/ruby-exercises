@@ -54,16 +54,13 @@ class NestesdCollectionsTest < Minitest::Test
   end
 
   def test_7
-    skip
+    # Add "Phil" as a pitcher
     team = {
       pitchers: ["Kenny", "Joan", "Shabaz"],
       fielders: ["Luke", "Chris", "Megan", "Mark", "Mackenzie"],
       catchers: ["Johnny"]
     }
-    # Using the team variable defined above
-    # add "Phil" as a pitcher
-    __________
-
+    team[:pitchers] << "Phil"
     expected = {
       pitchers: ["Kenny", "Joan", "Shabaz", "Phil"],
       fielders: ["Luke", "Chris", "Megan", "Mark", "Mackenzie"],
