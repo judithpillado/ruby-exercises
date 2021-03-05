@@ -19,10 +19,7 @@ class NestedTest < MiniTest::Test
   end
 
   def test_pancake_ingredients
-    skip
-    #=======================
-    # pancake_ingredients = <your code here>
-    #=======================
+    pancake_ingredients = stores[:dennys][:dishes][0][:ingredients]
     assert_equal ["Flour", "Eggs", "Milk", "Syrup"], pancake_ingredients
   end
 
