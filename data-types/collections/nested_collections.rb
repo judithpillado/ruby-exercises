@@ -190,11 +190,9 @@ class NestesdCollectionsTest < Minitest::Test
   end
 
   def test_20
-    skip
+    # Using the three_day_forecast variable, add a new key "time" with the value "12:30"
     three_day_forecast = {days: [{high: 70,low: 63,summary: "Mostly Sunny"},{high: 55,low: 47,summary: "Partly Cloudy"},{high: 77,low: 64,summary: "Sunny"}], "date" => "6-21-18",ref_num: 3456789765456787656}
-    # Using the three_day_forecast variable defined above,
-    # Add a new key "time" with the value "12:30"
-    _________
+    three_day_forecast["time"] = "12:30"
     expected = {"time" => "12:30", days: [{high: 70,low: 63,summary: "Mostly Sunny"},{high: 55,low: 47,summary: "Partly Cloudy"},{high: 77,low: 64,summary: "Sunny"}], "date" => "6-21-18",ref_num: 3456789765456787656}
     assert_equal expected, three_day_forecast
   end
