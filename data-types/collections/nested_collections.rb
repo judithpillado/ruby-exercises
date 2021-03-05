@@ -155,12 +155,10 @@ class NestesdCollectionsTest < Minitest::Test
   end
 
   def test_16
-    skip
+    # Using the three_day_forecast variable, retrieve the expected piece of information
     three_day_forecast = {days: [{high: 70,low: 63,summary: "Mostly Sunny"},{high: 55,low: 47,summary: "Partly Cloudy"},{high: 77,low: 64,summary: "Sunny"}], "date" => "6-21-18",ref_num: 3456789765456787656}
-    # Using the three_day_forecast variable defined above,
-    # retrieve the expected piece of information
 
-    actual = ________
+    actual = three_day_forecast[:days][0].keys 
     expected = [:high, :low, :summary]
     assert_equal expected, actual
   end
