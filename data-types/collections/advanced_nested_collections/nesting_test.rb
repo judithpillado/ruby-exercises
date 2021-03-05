@@ -29,10 +29,7 @@ class NestedTest < MiniTest::Test
   end
 
   def test_big_mac_ingredients
-    skip
-    #=======================
-    # big_mac_ingredients = <your code here>
-    #=======================
+    big_mac_ingredients = stores[:macdonalds][:dishes][0][:ingredients]
     assert_equal ['Bun','Hamburger','Ketchup','pickles'], big_mac_ingredients
   end
 
