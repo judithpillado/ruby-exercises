@@ -3,12 +3,10 @@ require 'minitest/autorun'
 require 'minitest/pride'
 
 # The intent of this exercise is to practice working with nested collections.
-# Some tests will be able to pass without any enumeration, and others will require
-# more complex iteration over multiple portions of the nested collection.
+# Some tests will be able to pass without any enumeration, and others will require more complex iteration over multiple portions of the nested collection.
 
 # All tests can be completed without using any enumerable other than #each.
-# My suggestion would be to complete all tests using only #each, and then
-# to go back over each test and refactor it using a different enumerable.
+# My suggestion would be to complete all tests using only #each, and then to go back over each test and refactor it using a different enumerable.
 
 # The collection you're going to be using lives in ./nesting.rb and is called stores.
 # If you spot an error or want to make this exercise better, please let us know!
