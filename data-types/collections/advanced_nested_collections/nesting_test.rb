@@ -34,10 +34,7 @@ class NestedTest < MiniTest::Test
   end
 
   def test_list_of_restaurants
-    skip
-    #=======================
-    # store_names = <your code here>
-    #=======================
+    store_names = stores.keys
     assert_equal [:olive_garden, :dennys, :macdonalds], store_names
   end
 
