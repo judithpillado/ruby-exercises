@@ -182,11 +182,9 @@ class NestesdCollectionsTest < Minitest::Test
   end
 
   def test_19
-    skip
+    # Using the three_day_forecast variable, change the high on the fist day to 99
     three_day_forecast = {days: [{high: 70,low: 63,summary: "Mostly Sunny"},{high: 55,low: 47,summary: "Partly Cloudy"},{high: 77,low: 64,summary: "Sunny"}], "date" => "6-21-18",ref_num: 3456789765456787656}
-    # Using the three_day_forecast variable defined above,
-    # Change the high on the fist day to 99
-    _______
+    three_day_forecast[:days][0][:high] = 99
     expected = {days: [{high: 99,low: 63,summary: "Mostly Sunny"},{high: 55,low: 47,summary: "Partly Cloudy"},{high: 77,low: 64,summary: "Sunny"}], "date" => "6-21-18",ref_num: 3456789765456787656}
     assert_equal expected, three_day_forecast
   end
