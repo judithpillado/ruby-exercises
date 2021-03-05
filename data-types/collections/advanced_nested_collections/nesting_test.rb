@@ -24,10 +24,7 @@ class NestedTest < MiniTest::Test
   end
 
   def test_rissotto_price
-    skip
-    #=======================
-    # risotto_price = <your code here>
-    #=======================
+    risotto_price = stores[:olive_garden][:dishes][0][:price]
     assert_equal 12, risotto_price
   end
 
