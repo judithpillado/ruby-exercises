@@ -101,10 +101,12 @@ class NestedTest < MiniTest::Test
   end
 
   def test_menu_accross_all_restaurants
-     skip
-    #=======================
-    #  full_menu = <your code here>
-    #=======================
+    full_menu = Hash.new
+    stores.each do |restaurant, details|
+      details[:dishes].each do |dish|
+        full_menu[dish[:name]] = dish
+      end
+    end
     expected = ({"Risotto"=>
                       {:name=>"Risotto", :ingredients=>["Rice", "Cheese", "Butter"], :price=>12},
                 "Steak"=>
