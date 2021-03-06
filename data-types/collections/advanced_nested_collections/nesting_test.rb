@@ -53,10 +53,11 @@ class NestedTest < MiniTest::Test
   end
 
   def test_list_of_all_ingredients_across_all_restaurants
-    skip
-    #=======================
-    # ingredients = <your code here>
-    #=======================
+    ingredients = stores.flat_map do |restaurant_name, details|
+      details[:dishes].flat_map do |dish|
+        dish[:ingredients]
+      end
+    end
     assert_equal ["Rice",
                   "Cheese",
                   "Butter",
