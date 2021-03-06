@@ -79,10 +79,10 @@ class NestedTest < MiniTest::Test
   end
 
   def test_full_menu_price_for_olive_garden
-    skip
-    #=======================
-    # full_menu_price = <your code here>
-    #=======================
+    full_menu_price = stores[:olive_garden][:dishes].map do |dish|
+      dish[:price]
+    end
+    full_menu_price = full_menu_price.inject(0, :+)
     assert_equal 27, full_menu_price
   end
 
