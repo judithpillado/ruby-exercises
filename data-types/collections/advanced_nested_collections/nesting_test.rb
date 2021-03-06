@@ -46,10 +46,9 @@ class NestedTest < MiniTest::Test
   end
 
   def test_list_of_employees_across_all_restaurants
-    skip
-    #=======================
-    # employee_names = <your code here>
-    #=======================
+    employee_names = stores.flat_map do |restaurant_name, details|
+      details[:employees]
+    end
     assert_equal ["Jeff","Zach","Samantha","Bob","Sue","James","Alvin","Simon","Theodore"], employee_names
   end
 
