@@ -91,10 +91,10 @@ class NestedTest < MiniTest::Test
   end
 
   def test_full_menu_for_olive_garden
-    skip
-    #=======================
-    # olive_garden_menu = <your code here>
-    #=======================
+    olive_garden_menu = Hash.new
+    stores[:olive_garden][:dishes].each do |dish|
+      olive_garden_menu[dish[:name]] = dish
+    end
     expected = ({"Risotto"=>{:name=>"Risotto", :ingredients=>["Rice", "Cheese", "Butter"], :price=>12},
                   "Steak"=>{:name=>"Steak", :ingredients=>["Beef", "Garlic"], :price=>15}})
     assert_equal expected, olive_garden_menu
