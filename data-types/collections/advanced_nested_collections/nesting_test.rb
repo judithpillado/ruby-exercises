@@ -39,10 +39,9 @@ class NestedTest < MiniTest::Test
   end
 
   def test_list_of_dishes_names_for_olive_garden
-    skip
-    #=======================
-    # dishes_names = <your code here>
-    #=======================
+    dishes_names = stores[:olive_garden][:dishes].map do |dish|
+      dish[:name]
+    end
     assert_equal ['Risotto', 'Steak'], dishes_names
   end
 
