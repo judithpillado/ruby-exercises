@@ -79,10 +79,14 @@ class NestedTest < MiniTest::Test
   end
 
   def test_full_menu_price_for_olive_garden
-    full_menu_price = stores[:olive_garden][:dishes].map do |dish|
-      dish[:price]
+    # full_menu_price = stores[:olive_garden][:dishes].map do |dish|
+    #   dish[:price]
+    # end
+    # full_menu_price = full_menu_price.inject(0, :+)
+    full_menu_price = stores[:olive_garden][:dishes].reduce(0) do |collection, dish|
+      # every time we have a "collector" within the method, we could probably use REDUCE! or inject - they're the same thing
+      collection += dish[:price]
     end
-    full_menu_price = full_menu_price.inject(0, :+)
     assert_equal 27, full_menu_price
   end
 
